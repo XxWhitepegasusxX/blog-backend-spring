@@ -1,8 +1,9 @@
-package com.example.blog.repositories;
+package com.example.blog.repositories.postRepository;
 
-import com.example.blog.models.PostModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.example.blog.models.post.PostModel;
 
 import java.util.UUID;
 

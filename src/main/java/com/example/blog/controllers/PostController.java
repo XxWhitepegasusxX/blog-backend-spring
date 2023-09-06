@@ -1,8 +1,8 @@
 package com.example.blog.controllers;
 
 import com.example.blog.dtos.PostRecordDto;
-import com.example.blog.models.PostModel;
-import com.example.blog.repositories.PostRepository;
+import com.example.blog.models.post.PostModel;
+import com.example.blog.repositories.postRepository.PostRepository;
 
 import jakarta.validation.Valid;
 

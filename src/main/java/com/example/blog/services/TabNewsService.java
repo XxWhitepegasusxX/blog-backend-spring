@@ -1,3 +1,4 @@
+package com.example.blog.services;
 /*package com.example.blog.services;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -38,10 +39,13 @@ public class TabNewsService {
 
         try{
             JsonNode responseJson = objectMapper.readTree(responseEntity.getBody());
-            sessionId = responseJson.get("id").asText();
+            this.sessionId = responseJson.get("id").asText();
         }catch (Exception e){
             throw new RuntimeException("Error getting sessionId", e);
         }
     }
-}
-*/
+
+    public void sendPost(String title, String content){
+        
+    }
+}*/

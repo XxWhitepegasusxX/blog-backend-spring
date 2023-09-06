@@ -1,12 +1,17 @@
-package com.example.blog.models;
-
-import jakarta.persistence.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.hateoas.RepresentationModel;
+package com.example.blog.models.post;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.hateoas.RepresentationModel;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name="Posts")
