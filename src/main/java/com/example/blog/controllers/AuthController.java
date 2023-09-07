@@ -5,7 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -42,8 +41,6 @@ public class AuthController {
         var auth = this.authenticationManager.authenticate(usernamePassword);
         var token = tokenService.generateToken((UserModel) auth.getPrincipal());
         var username = tokenService.validateToken(token);
-        var email = tokenService.extractEmailByToken(token);
-        UserDetails user = userRepository.findByUsername(username);
         return ResponseEntity.ok(new LoginResponseDto(username, token));
     }
 
